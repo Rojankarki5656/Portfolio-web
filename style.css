@@ -1,0 +1,153 @@
+html{
+    box-sizing: border-box;
+    height: 120%;
+}
+body{
+    background:linear-gradient(#4954f0 , #140606 , #4954f0);
+    height: 100%;
+    width: 100%;
+    
+}
+.haha{
+    background-color: rgba(255 ,255 ,255, .1);
+    border-radius: 1rem;
+    display: flex;
+    width: 13.5vw;
+    height: 7vh;
+    position: relative;
+    left: 75vw;
+    margin-top: 2vw;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    left: 0.8rem;
+}
+h1{
+    color: aliceblue;
+    
+    display: flex;
+    justify-content: center;
+    padding: 0 3vw;
+    position: relative;
+    right: 43%;
+    margin-bottom: 1%;
+}
+.container{
+    display: flex;
+    align-items: center;
+    background: rgba(255 ,255, 255, 0.1);
+    backdrop-filter: blur(5.5px);
+    border-radius: 16px;
+    color: #fff;
+    width: 17vw;
+    height: 30vw;
+    position: relative;
+    left: 40%;
+    overflow: hidden;
+    transition: width 0.4s, left 0.4s;
+    -webkit-transition: width 0.4s, left 0.4s;
+    
+}
+.stats{
+  position: relative;
+  right: 10%;
+   
+
+}
+.container img{
+    height: 30vw;
+    position: relative;
+    right: 10%;
+}
+.sabai{
+    display: flex;
+    justify-content: center;
+    gap: 8vw;
+    margin-top: 5%;
+}
+.link{
+    background: rgba(255 ,255 ,255, .1);
+    border-radius: 14px;
+    backdrop-filter: blur(5.5px);
+    padding: 1vw 0.5vw;
+    padding: 3vw 3vw;
+
+}
+.link2{
+    background: rgba(255 ,255 ,255, .1);
+    border-radius: 14px;
+    backdrop-filter: blur(5.5px);
+    padding: 1vw 0.5vw;
+    padding: 3vw 3vw;
+
+}
+.link3{
+    background: rgba(255 ,255 ,255, .1);
+    border-radius: 14px;
+    backdrop-filter: blur(5.5px);
+    padding: 1vw 0.5vw;
+    padding: 3vw 3vw;
+
+}
+.fb{
+    text-decoration:none;
+
+}
+ :hover.container{
+    width: 50%;
+   left: 30%;
+    
+ }
+
+
+
+
+@media (max-width:600px) {
+
+    .haha{
+    background-color: rgba(255 ,255 ,255, .1);
+    border-radius: 1rem;
+    display: flex;
+    padding: 7vw 2vh;
+    width: 45vw;
+    height: 0;
+    position: relative;
+    left: 13.5rem;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.container{
+      padding: 25vw 14vw;
+      margin-top: 10%;
+      left: 30%;
+      transition: left o.4s;
+}
+.container:hover{
+    left: 15%;
+}
+.stats{
+    text-align: center;
+    right: 6rem;
+}
+.container img{
+      height: 20rem;
+      right: 5rem;
+}
+
+.sabai{
+    margin-top: 19%;
+}
+h1{
+    right: 35%;
+    margin-top: 2vw;
+}
+
+}
