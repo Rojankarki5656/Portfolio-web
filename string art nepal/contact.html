@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        form {
+            width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        form input, form textarea, form button {
+            width: calc(100% - 20px);
+            margin: 10px 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #4cae4c;
+        }
+        .response {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="emailForm">
+        <h2>Please Provide Your Details</h2>
+        <div id="cartDetailsContainer"></div>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="phone" placeholder="Your Phone" required />
+        <textarea name="address" placeholder="Your Address" rows="4" required></textarea>
+        <button type="submit">Send</button>
+        <div class="loading">Sending...</div>
+        <div class="response"></div>
+    </form>
+
+    <script src="script.js" src="cart.js"></script>
+</body>
+</html>

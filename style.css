@@ -36,6 +36,17 @@ h1{
     right: 43%;
     margin-bottom: 1%;
 }
+
+#shop{
+    color: aliceblue;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0 3vw;
+    position: relative;
+    right: 40%;
+    margin-bottom: 1%;
+}
 .container{
     display: flex;
     align-items: center;
