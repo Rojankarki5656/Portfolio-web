@@ -2,6 +2,13 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+
+
+
 // Include PHPMailer library
 require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
