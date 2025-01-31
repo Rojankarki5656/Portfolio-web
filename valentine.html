@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffebf0;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .question {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no {
+            background-color: #666;
+            color: white;
+            position: absolute;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question">Will you be my Valentine? 💖</div>
+        <button class="btn yes" onclick="showLove()">Yes</button>
+        <button class="btn no" onmouseover="moveButton(this)">No</button>
+    </div>
+    <div id="love-message" class="hidden">
+        <h1>Yay! 💕 You made my day! 💖</h1>
+        <h2>Lets go on a date 😍</h2>
+        <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Love Gif" width="200px">
+    </div>
+
+    <script>
+        function moveButton(button) {
+            let x = Math.random() * (window.innerWidth - button.clientWidth);
+            let y = Math.random() * (window.innerHeight - button.clientHeight);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+        function showLove() {
+            document.querySelector('.container').classList.add('hidden');
+            document.getElementById('love-message').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
