@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - DisciPlan</title>
+  <link rel="stylesheet" href="../css/styless.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script type="module" src="../JS/auths.js"></script> <!-- ✅ Ensure JS is linked -->
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-section fade-in">
+      <!-- Logo -->
+      <img src="/improved_version/shark.png" alt="DisciPlan Logo" class="login-logo">
+      
+      <h2>Login</h2>
+      <form id="login-form">
+        <!-- Email Input -->
+        <input type="email" id="login-email" placeholder="Email" required>
+        
+        <!-- Password Input -->
+        <input type="password" id="login-password" placeholder="Password" required>
+        
+        <!-- Login Button -->
+        <button id="login-btn">Log In</button>
+        
+        <!-- Google Sign-In Button -->
+        <div class="google-signin-btn" id="google-signin-btn">
+            Sign in with Google
+        </div>
+
+      </form>
+
+      <p class="signup-link">Don't have an account? <a href="../HTML/sign.html">Sign Up</a></p>
+    </div>
+  </div>
+</body>
+</html>

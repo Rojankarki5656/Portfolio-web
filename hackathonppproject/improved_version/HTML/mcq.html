@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCQ Game</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1>MCQ Game</h1>
+    <div id="quiz">
+      <!-- Current question will be dynamically inserted here -->
+    </div>
+    <div class="navigation">
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+    <button id="submit">Submit</button>
+    <div id="result"></div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Your Result</h2>
+      <p id="popup-message"></p>
+      <button id="close-popup">Close</button>
+    </div>
+  </div>
+
+  <script src="../JS/mcq.js"></script>
+</body>
+</html>
