@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - DisciPlan</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+<body>
+    <div class="signup-container">
+        <!-- Left Side: Welcome Message -->
+        <div class="welcome-section animate__animated animate__fadeInLeft">
+            <h1>Join Us!</h1>
+            <p>Create your account and start your journey with DisciPlan today.</p>
+        </div>
+
+        <!-- Right Side: Signup Form -->
+        <div class="signup-section animate__animated animate__fadeInRight">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="signup-name" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="impressive-button">Sign Up</button>
+
+            </form>
+            <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <script type="module" src="../JS/auths.js"></script>
+    
+</body>
+</html>
