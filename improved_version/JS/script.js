@@ -70,5 +70,5 @@ const userName = sessionStorage.getItem("userName"); // Check if user is logged 
 
 if (!userName) {
     // If not logged in, redirect to login page
-    window.location.href = "../HTML/login.html";
+    window.location.href = "../HTML/landing.html";
 }

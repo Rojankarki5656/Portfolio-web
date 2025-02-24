@@ -1462,8 +1462,9 @@ nav ul li a:hover {
 
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
-}/* Google Login Button Styles */
-.google-login-button {
+}
+
+.get-started-button {
   background: white;
   color: #333;
   border: 1px solid #ccc;
@@ -1477,16 +1478,12 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   gap: 10px; /* Space between icon and text */
 }
 
-.google-login-button:hover {
+.get-started-button:hover {
   background: #f0f0f0;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.google-login-button img {
-  width: 20px; /* Adjust icon size as needed */
-  height: auto;
 }

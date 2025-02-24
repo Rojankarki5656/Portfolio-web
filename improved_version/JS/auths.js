@@ -92,7 +92,7 @@ window.forgotPassword = function () {
 
 
 // Google Sign-In function
-window.googleSignIn = function () {
+async function googleSignIn() {
   signInWithPopup(auth, provider)
     .then((result) => {
       const user = result.user;
@@ -112,7 +112,8 @@ window.googleSignIn = function () {
 
 // Attach event listener to Google Sign-In button
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("google-signin-btn").addEventListener("click", googleSignIn);
+  const btn = document.getElementById("google-signin-btn");
+  btn.addEventListener("click", googleSignIn);
 });
 
 // Logout function
@@ -121,7 +122,7 @@ export function logout() {
       .then(() => {
           sessionStorage.removeItem("userName");
           sessionStorage.removeItem("userUID");
-          window.location.href = "../HTML/login.html";
+          window.location.href = "../HTML/landing.html";
       })
       .catch(error => {
           console.error("Logout failed:", error);
