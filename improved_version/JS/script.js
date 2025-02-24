@@ -46,7 +46,7 @@
                 sessionStorage.removeItem('userUID');
 
                 // Redirect to login page
-                window.location.href = '/improved_version/HTML/login.html';
+                window.location.href = '../HTML/login.html';
             });
 
       })
@@ -66,7 +66,7 @@ window.addEventListener('click', (e) => {
     }
 });
 
-const userUID = sessionStorage.getItem("userUID"); // Check if user is logged in
+const userName = sessionStorage.getItem("userName"); // Check if user is logged in
 
 if (!userName) {
     // If not logged in, redirect to login page
