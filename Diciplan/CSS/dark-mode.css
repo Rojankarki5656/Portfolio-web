@@ -1,0 +1,31 @@
+/* Default Light Mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --button-bg: #6200ea;
+    --button-text: #ffffff;
+  }
+  
+  /* Dark Mode */
+  .dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --button-bg: #bb86fc;
+    --button-text: #000000;
+  }
+  
+  /* Apply variables */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  

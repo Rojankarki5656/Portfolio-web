@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  flex-direction: row; /* Set horizontal alignment */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  gap: 20px; /* Add spacing between elements */
+}
+
+/* Main Page */
+#main-page {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  flex-wrap: wrap; /* Wrap items if screen is small */
+  justify-content: center;
+  gap: 20px; /* Add space between items */
+  padding: 20px;
+}
+
+/* Feature Boxes */
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 220px; /* Reduce width for horizontal alignment */
+  text-align: center;
+}
+
+/* Feature Box Images */
+.feature-box img {
+  width: 100%;
+  height: 200px; /* Reduce height for better alignment */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Hide initially */
+.hidden {
+  display: none;
+}
+
+/* Back Button */
+.back-btn {
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.back-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}

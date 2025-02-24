@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisciPlan - Landing Page</title>
+    <link rel="icon" type="image/png" href="/improved_version/shark.png">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header id="landing-header" class="animate__animated animate__fadeInDown">
+        <h1>Welcome to DisciPlan</h1>
+        <p>Your ultimate productivity and well-being companion.</p>
+        <a href="../HTML/login.html" class="get-started-button">Get Started</a>
+    </header>
+
+    <main>
+        <section id="about" class="animate__animated animate__fadeInUp">
+            <h2>About DisciPlan</h2>
+            <p>DisciPlan is your all-in-one solution for enhancing focus, managing tasks, and improving mental well-being.</p>
+        </section>
+
+        <section id="features" class="animate__animated animate__fadeInUp">
+            <div class="feature-grid">
+                <div class="feature-card" onclick="checkLoginStatus('tasks.html')">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Task Management</h3>
+                    <p>Organize your daily tasks with priority levels and deadlines.</p>
+                </div>
+                <div class="feature-card" onclick="checkLoginStatus('pomodoro.html')">
+                    <i class="fas fa-clock"></i>
+                    <h3>Pomodoro Timer</h3>
+                    <p>Boost productivity with structured work and break intervals.</p>
+                </div>
+                <div class="feature-card" onclick="checkLoginStatus('progress.html')">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your productivity and growth through detailed analytics.</p>
+                </div>
+                <div class="feature-card" onclick="checkLoginStatus('chatbot.html')">
+                    <i class="fas fa-comments"></i>
+                    <h3>Wellness Chat</h3>
+                    <p>Get emotional support and motivation from our AI chatbot.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animate__animated animate__fadeInUp">
+        <p>&copy; 2025 DisciPlan. All rights reserved.</p>
+    </footer>
+
+    <script src="../JS/landing.js"></script>
+</body>
+</html>

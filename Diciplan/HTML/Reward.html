@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards - DisciPlan</title>
+    <link rel="icon" type="image/png" href="/improved_version/shark.png">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+        }
+        #rewards-section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .reward-card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .reward-progress {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .reward-progress span {
+            font-weight: bold;
+        }
+        .leaderboard {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .leaderboard-table th, .leaderboard-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .leaderboard-table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .leaderboard-table td {
+            background-color: #f9f9f9;
+        }
+        .leaderboard-table .rank {
+            font-weight: bold;
+        }
+        .first-place {
+            background-color: #FFD700; /* Gold */
+            color: black;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .second-place {
+            background-color: #C0C0C0; /* Silver */
+            color: black;
+            font-weight: bold;
+        }
+        .third-place {
+            background-color: #cd7f32; /* Bronze */
+            color: black;
+            font-weight: bold;
+        }
+        .rank-icon {
+            margin-right: 8px;
+            font-size: 24px;
+        }
+        .leaderboard-message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container">
+        <!-- Header content will go here -->    
+    </div>
+
+    <main>
+        <!-- Reward Section -->
+        <section id="rewards-section">
+            <h2>Reward Section</h2>
+
+            <!-- Reward Progress Card -->
+            <div class="reward-card">
+                <h3>Your Progress</h3>
+                <div class="reward-progress">
+                    <span>Tasks Completed: <strong id="tasks-completed">10</strong></span>
+                    <span>Points: <strong id="points">50</strong></span>
+                </div>
+                <div class="reward-progress">
+                    <button id="claim-reward-btn" class="button-standard">Claim Reward</button>
+                </div>
+            </div>
+
+            <!-- Leaderboard -->
+            <div class="leaderboard">
+                <h3>Leaderboard</h3>
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard">
+                        <!-- Leaderboard entries will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="leaderboard-message">
+                <p>Earn more points by completing your tasks!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DisciPlan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simulated leaderboard data
+        const leaderboardData = [
+            { name: 'Player 1', points: 300 },
+            { name: 'Player 2', points: 280 },
+            { name: 'Player 3', points: 250 },
+            { name: 'Player 4', points: 230 },
+            { name: 'Player 5', points: 210 },
+            { name: 'Player 6', points: 200 },
+            { name: 'Player 7', points: 190 },
+            { name: 'Player 8', points: 180 },
+            { name: 'Player 9', points: 170 },
+            { name: 'Player 10', points: 160 }
+        ];
+
+        // Function to display the leaderboard
+        function displayLeaderboard() {
+            const leaderboardTable = document.getElementById('leaderboard');
+            leaderboardTable.innerHTML = ''; // Clear previous leaderboard data
+
+            leaderboardData.forEach((player, index) => {
+                const row = document.createElement('tr');
+                let playerClass = '';
+                let icon = '';
+
+                if (index === 0) {
+                    playerClass = 'first-place';
+                    icon = '👑'; // Crown for first place
+                } else if (index === 1) {
+                    playerClass = 'second-place';
+                    icon = ''; // No icon for second place
+                } else if (index === 2) {
+                    playerClass = 'third-place';
+                    icon = ''; // No icon for third place
+                }
+
+                row.innerHTML = `
+                    <td class="rank ${playerClass}">
+                        ${icon} ${index + 1}
+                    </td>
+                    <td>${player.name}</td>
+                    <td>${player.points}</td>
+                `;
+                leaderboardTable.appendChild(row);
+            });
+        }
+
+        // Handle claiming rewards (message only for now)
+        document.getElementById('claim-reward-btn').addEventListener('click', function () {
+            alert('Claim your reward by completing tasks and earning points!');
+        });
+
+        // Initialize leaderboard
+        displayLeaderboard();
+    </script>
+</body>
+    <script type="module" src="../JS/script.js"></script>
+</html>
+
