@@ -68,6 +68,16 @@ h1{
     right: 20%;
     margin-bottom: 1%;
 }
+#diciplan{
+    color: aliceblue;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0 3vw;
+    position: relative;
+    right: 25%;
+    margin-bottom: 1%;
+}
 .container{
     display: flex;
     align-items: center;
