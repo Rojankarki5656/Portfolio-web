@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Update display name in Firebase Auth profile
         await updateProfile(user, { displayName: name });
         sessionStorage.setItem("userUID", userCredential.user.uid);
-        window.location.href = "login.html"; // Redirect to login page
+        window.location.href = "../HTML/login.html"; // Redirect to login page
       } catch (error) {
         console.error("❌ Sign-Up Error:", error.message);
         alert(error.message);
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         sessionStorage.setItem("userName", userCredential.user.displayName);
         alert("🎉 Login Successful!");
-        window.location.href = "/improved_version/HTML/index.html"; // Redirect after login
+        window.location.href = "../HTML/index.html"; // Redirect after login
       } catch (error) {
         console.error("❌ Login Error:", error.message);
         alert("❌ Invalid email or password.");
@@ -103,7 +103,7 @@ window.googleSignIn = function () {
       sessionStorage.setItem("userUID", user.uid);
 
       // Redirect to index.html
-      window.location.href = "/improved_version/HTML/index.html";
+      window.location.href = "../HTML/index.html";
     })
     .catch((error) => {
       console.error("Google Sign-In Error:", error.message);
@@ -121,7 +121,7 @@ export function logout() {
       .then(() => {
           sessionStorage.removeItem("userName");
           sessionStorage.removeItem("userUID");
-          window.location.href = "/improved_version/HTML/login.html";
+          window.location.href = "../HTML/login.html";
       })
       .catch(error => {
           console.error("Logout failed:", error);

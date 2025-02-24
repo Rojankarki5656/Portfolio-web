@@ -1,7 +1,7 @@
   // Load header dynamically
   import { logout } from "../JS/auths.js"; // Import the logout function
 
-  fetch("/improved_version/HTML/header.html")
+  fetch("../HTML/header.html")
       .then(response => response.text())
       .then(data => {
           document.getElementById("header-container").innerHTML = data;
@@ -70,5 +70,5 @@ const userUID = sessionStorage.getItem("userUID"); // Check if user is logged in
 
 if (!userName) {
     // If not logged in, redirect to login page
-    window.location.href = "/improved_version/HTML/login.html";
+    window.location.href = "../HTML/login.html";
 }
